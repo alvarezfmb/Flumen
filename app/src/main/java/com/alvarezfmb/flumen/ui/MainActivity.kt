@@ -1,9 +1,10 @@
-package com.alvarezfmb.flumen
+package com.alvarezfmb.flumen.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
+import com.alvarezfmb.flumen.R
 import com.alvarezfmb.flumen.databinding.MainActivityBinding
 
 class MainActivity : AppCompatActivity() {

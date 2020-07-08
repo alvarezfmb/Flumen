@@ -1,4 +1,4 @@
-package com.alvarezfmb.flumen.ui.main
+package com.alvarezfmb.flumen.ui.feed
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,13 +8,13 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import com.alvarezfmb.flumen.R
 
-class MainFragment : Fragment() {
+class FeedFragment : Fragment() {
 
-    private val viewModel: MainViewModel by viewModels()
+    private val viewModel: FeedViewModel by viewModels()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
-        return inflater.inflate(R.layout.main_fragment, container, false)
+        return inflater.inflate(R.layout.feed_fragment, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

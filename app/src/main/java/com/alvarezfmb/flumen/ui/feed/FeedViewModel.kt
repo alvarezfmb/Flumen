@@ -1,7 +1,7 @@
-package com.alvarezfmb.flumen.ui.main
+package com.alvarezfmb.flumen.ui.feed
 
 import androidx.lifecycle.ViewModel
 
-class MainViewModel : ViewModel() {
+class FeedViewModel : ViewModel() {
     // TODO: Implement the ViewModel
 }

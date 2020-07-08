@@ -1,4 +1,4 @@
-package com.alvarezfmb.flumen
+package com.alvarezfmb.flumen.ui.suscriptions
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
