@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:orientation="vertical"
+    android:layout_marginBottom="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.suscriptions.addsuscription.AddSuscription">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_add_suscription"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:hint="@string/add_suscription_link_hint"
+        app:startIconDrawable="@drawable/ic_insert_link_24dp"
+        android:layout_weight="1"
+        app:helperTextEnabled="true"
+        app:helperTextTextColor="@color/error"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text_add_suscription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textUri"
+            android:imeOptions="actionDone" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/button_add_suscription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:text="@string/add_suscription"
+        />
+
+</LinearLayout>

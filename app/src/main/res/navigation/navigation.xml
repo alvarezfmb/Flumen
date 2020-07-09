@@ -19,5 +19,18 @@
         android:id="@+id/suscriptionsFragment"
         android:name="com.alvarezfmb.flumen.ui.suscriptions.SuscriptionsFragment"
         android:label="fragment_suscriptions"
-        tools:layout="@layout/fragment_suscriptions" />
+        tools:layout="@layout/fragment_suscriptions" >
+        <action
+            android:id="@+id/action_suscriptionsFragment_to_addSuscription"
+            app:destination="@id/addSuscription" />
+    </fragment>
+    <fragment
+        android:id="@+id/addSuscription"
+        android:name="com.alvarezfmb.flumen.ui.suscriptions.addsuscription.AddSuscription"
+        android:label="fragment_add_suscription"
+        tools:layout="@layout/fragment_add_suscription" >
+        <action
+            android:id="@+id/action_addSuscription_to_suscriptionsFragment"
+            app:destination="@id/suscriptionsFragment" />
+    </fragment>
 </navigation>

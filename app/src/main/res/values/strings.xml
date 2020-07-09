@@ -7,6 +7,12 @@
     <string name="feed">Feed</string>
     <string name="search">Search</string>
     <string name="suscriptions">Suscriptions</string>
+    <string name="add_suscription">Add suscription</string>
+    <string name="add_suscription_link_hint">Enter URL</string>
+    <string name="suscription_added">Suscription added</string>
+    <string name="invalid_url">Invalid URL</string>
+
+
 
 
 </resources>

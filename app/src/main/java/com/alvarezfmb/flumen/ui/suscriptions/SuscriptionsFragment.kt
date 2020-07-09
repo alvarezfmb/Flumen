@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
+import com.alvarezfmb.flumen.R
 import com.alvarezfmb.flumen.databinding.FragmentSuscriptionsBinding
 
 
@@ -19,6 +21,13 @@ class SuscriptionsFragment : Fragment() {
     ): View? {
         _binding = FragmentSuscriptionsBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.buttonAddSuscription.setOnClickListener {
+            findNavController().navigate(R.id.action_suscriptionsFragment_to_addSuscription)
+        }
     }
 
     override fun onDestroyView() {
