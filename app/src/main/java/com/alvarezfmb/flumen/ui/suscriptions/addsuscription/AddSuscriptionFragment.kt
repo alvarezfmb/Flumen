@@ -10,15 +10,18 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.alvarezfmb.flumen.R
+import com.alvarezfmb.flumen.database.DataSourceDatabase
 import com.alvarezfmb.flumen.databinding.FragmentAddSuscriptionBinding
 import com.alvarezfmb.flumen.utils.hideKeyboard
 
 
-class AddSuscription : Fragment() {
+class AddSuscriptionFragment : Fragment() {
 
     private var _binding: FragmentAddSuscriptionBinding? = null
     private val binding get() = _binding!!
-    private val viewModel: AddSuscriptionViewModel by viewModels()
+    private val viewModel: AddSuscriptionViewModel by viewModels{
+        AddSuscriptionViewModelFactory(DataSourceDatabase.getInstance(requireContext()).dataSourceDao)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -46,10 +49,13 @@ class AddSuscription : Fragment() {
 
     private fun onAddSuscriptionButtonClick() {
         hideKeyboard()
-        viewModel.validateUrl(binding.editTextAddSuscription.text?.toString())
+        val url = binding.editTextAddSuscription.text?.toString()
+        viewModel.validateUrl(url)
         viewModel.validUrl.observe(viewLifecycleOwner, Observer { validUrl ->
+            // TODO: evaluar migrar esta lógica al viewmodel
             if (validUrl) {
                 binding.inputAddSuscription.helperText = ""
+                viewModel.onValidUrlAdded(url)
                 findNavController().navigate(R.id.action_addSuscription_to_suscriptionsFragment)
             } else {
                 binding.inputAddSuscription.helperText = getString(R.string.invalid_url)
