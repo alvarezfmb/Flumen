@@ -1,5 +1,6 @@
 package com.alvarezfmb.flumen.database
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
@@ -12,5 +13,5 @@ interface DataSourceDao {
     fun insert(dataSource: DataSource)
 
     @Query("SELECT * from data_source_table")
-    fun getAll() : List<DataSource>
+    fun getAll() : LiveData<List<DataSource>>
 }

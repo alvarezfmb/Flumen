@@ -14,7 +14,7 @@ class FeedFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
-        return inflater.inflate(R.layout.feed_fragment, container, false)
+        return inflater.inflate(R.layout.fragment_feed, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
